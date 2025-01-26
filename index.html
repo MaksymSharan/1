@@ -1,59 +1,33 @@
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Переломні роки України</title>
+  <link rel="stylesheet" href="css/styles.css"> <!-- Підключення стилів -->
+</head>
+<body>
+  <div class="header-bar">Переломні роки України</div>
 
-const GradientHeader = () => (
-  <header
-    className="w-full h-16 bg-gradient-to-r from-blue-500 to-yellow-400 flex items-center justify-center"
-  >
-    <h1 className="text-white text-xl font-bold">Переломні роки України</h1>
-  </header>
-);
-
-const ArticleBlock = ({ title, description, image, link }) => (
-  <Card className="shadow-lg">
-    <img src={image} alt={title} className="rounded-t-xl" />
-    <CardContent className="p-4">
-      <h2 className="text-2xl font-bold mb-2">{title}</h2>
-      <p className="text-gray-700 mb-4">{description}</p>
-      <Button
-        variant="link"
-        className="text-blue-500 hover:underline flex items-center gap-1"
-        onClick={() => window.location.href = link}
-      >
-        Читати далі
-      </Button>
-    </CardContent>
-  </Card>
-);
-
-const Footer = () => (
-  <footer className="bg-black text-white py-4 text-center">
-    <p>2025 Усі права захищено.</p>
-  </footer>
-);
-
-export default function Home() {
-  return (
-    <div className="font-sans">
-      <GradientHeader />
-      <main className="py-12 px-8 bg-gray-100">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <ArticleBlock
-            title="Вибори 1991 та ядерне роззброєння"
-            description="Детальний аналіз перших виборів незалежної України та шляху до ядерного роззброєння."
-            image="https://via.placeholder.com/400x200"
-            link="#"
-          />
-          <ArticleBlock
-            title="Клани України: початок епохи"
-            description="Як формувалися перші фінансово-промислові групи у 90-х та їхній вплив на країну."
-            image="https://via.placeholder.com/400x200"
-            link="#"
-          />
-        </div>
-      </main>
-      <Footer />
+  <div class="materials">
+    <div class="material">
+      <img src="https://via.placeholder.com/600x400" alt="Матеріал 1">
+      <div class="material-content">
+        <h2>Вибори 1991 та ядерне роззброєння</h2>
+        <p>Це був початок великого шляху незалежної України...</p>
+        <a href="#">Читати більше</a>
+      </div>
     </div>
-  );
-}
+    <div class="material">
+      <img src="https://via.placeholder.com/600x400" alt="Матеріал 2">
+      <div class="material-content">
+        <h2>Клани 90-х</h2>
+        <p>Економічний хаос породив нові виклики для країни...</p>
+        <a href="#">Читати більше</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">2025 Усі права захищено</div>
+</body>
+</html>
