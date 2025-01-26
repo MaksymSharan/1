@@ -1,0 +1,111 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Search, ChevronRight } from "lucide-react";
+
+const FullScreenImage = () => (
+  <section
+    className="bg-cover bg-center h-screen flex items-center justify-center"
+    style={{ backgroundImage: "url('https://maksymsharan.github.io/Spoty.png')" }}
+  >
+    <div className="bg-black bg-opacity-50 p-8 rounded-xl text-center text-white">
+      <h1 className="text-5xl font-bold mb-4">Welcome to Ukraine 90s Chronicles</h1>
+      <p className="text-xl mb-6">Explore the stories that shaped a nation.</p>
+      <Button variant="secondary" className="bg-white text-black hover:bg-gray-200">
+        Learn More
+      </Button>
+    </div>
+  </section>
+);
+
+const Header = () => {
+  const navLinks = [
+    { name: "Home", href: "#" },
+    { name: "About", href: "#" },
+    { name: "Articles", href: "#" },
+    { name: "Contact", href: "#" },
+  ];
+
+  return (
+    <header className="bg-black text-white py-4 px-8 flex justify-between items-center">
+      <h1 className="text-2xl font-bold">Переломні роки України</h1>
+      <nav className="flex gap-4">
+        {navLinks.map((link, index) => (
+          <a key={index} href={link.href} className="hover:underline">
+            {link.name}
+          </a>
+        ))}
+      </nav>
+    </header>
+  );
+};
+
+const HeroSection = () => (
+  <section className="bg-cover bg-center h-[60vh] flex items-center justify-center text-center text-white" style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}>
+    <div className="bg-black bg-opacity-50 p-8 rounded-xl">
+      <h2 className="text-4xl font-bold mb-4">...</h2>
+      <p className="text-lg mb-6">.....</p>
+      <Button variant="secondary" className="bg-white text-black hover:bg-gray-200">Explore Now</Button>
+    </div>
+  </section>
+);
+
+const FeaturedArticles = () => (
+  <section className="py-12 px-8 bg-gray-100">
+    <h2 className="text-3xl font-bold text-center mb-8">Featured Articles</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {[1, 2, 3].map((item) => (
+        <Card key={item} className="shadow-lg">
+          <img src={`/images/article-${item}.jpg`} alt="Article Thumbnail" className="rounded-t-xl" />
+          <CardContent className="p-4">
+            <h3 className="font-bold text-xl mb-2">Article Title {item}</h3>
+            <p className="text-gray-700 mb-4">A brief description of the article content and its significance.</p>
+            <Button variant="link" className="text-blue-500 hover:underline flex items-center gap-1">
+              Read More <ChevronRight size={16} />
+            </Button>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </section>
+);
+
+const SearchSection = () => (
+  <section className="py-12 bg-white px-8">
+    <h2 className="text-2xl font-bold text-center mb-6">Search Our Archives</h2>
+    <div className="flex justify-center">
+      <div className="flex items-center gap-2 w-full max-w-lg">
+        <Input placeholder="Search articles, topics, or keywords" className="flex-1" />
+        <Button variant="default" className="bg-blue-500 text-white hover:bg-blue-600 flex items-center gap-2">
+          <Search size={16} /> Search
+        </Button>
+      </div>
+    </div>
+  </section>
+);
+
+const Footer = () => (
+  <footer className="bg-black text-white py-8 px-8">
+    <div className="flex justify-between items-center">
+      <p>&copy; 2025 Ukraine 90s Chronicles. All Rights Reserved.</p>
+      <nav className="flex gap-4">
+        <a href="#" className="hover:underline">Privacy Policy</a>
+        <a href="#" className="hover:underline">Terms of Service</a>
+      </nav>
+    </div>
+  </footer>
+);
+
+export default function Home() {
+  return (
+    <div className="font-sans">
+      <FullScreenImage />
+      <Header />
+      <HeroSection />
+      <FeaturedArticles />
+      <SearchSection />
+      <Footer />
+    </div>
+  );
+}
