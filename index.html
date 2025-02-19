@@ -14,38 +14,35 @@
       color: #333;
     }
 
-    /* Градиєнтна смужка зверху */
+    /* Заголовок "Preambula" */
     .header {
       text-align: center;
-      padding: 20px;
+      padding: 10px 0; /* Зменшено відстань */
     }
 
     .title-main {
       font-size: 36px;
       font-weight: bold;
+      margin-bottom: 5px; /* Мінімальна відстань */
     }
 
-    .title-sub {
-      font-size: 24px;
-      color: #555;
-    }
-
+    /* Градиєнтна смужка */
     .header-bar {
       background: linear-gradient(to right, blue, yellow);
       color: white;
       text-align: center;
-      padding: 20px 0;
+      padding: 10px 0;
       font-size: 1.5rem;
       font-weight: bold;
       text-transform: uppercase;
     }
 
-    /* Стиль секції для матеріалів */
+    /* Контейнер матеріалів */
     .materials {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
-      padding: 40px 20px;
+      padding: 20px;
     }
 
     .material {
@@ -54,6 +51,7 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       overflow: hidden;
       transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
     }
 
     .material:hover {
@@ -61,12 +59,15 @@
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
 
+    /* Однаковий розмір зображень */
     .material img {
       width: 100%;
-      height: auto;
+      height: 300px;
+      object-fit: cover;
       display: block;
     }
 
+    /* Контент усередині матеріалу */
     .material-content {
       padding: 20px;
     }
@@ -93,7 +94,7 @@
       text-decoration: underline;
     }
 
-    /* Секція футера */
+    /* Футер */
     .footer {
       background: #000;
       color: white;
@@ -112,7 +113,9 @@
 
   <div class="materials">
     <div class="material">
-      <img src="https://maksymsharan.github.io/1/Spoty.png" alt="Матеріал 1">
+      <a href="https://maksymsharan.github.io/">
+        <img src="https://maksymsharan.github.io/1/Spoty.png" alt="Матеріал 1">
+      </a>
       <div class="material-content">
         <h2>Вибори 1991 та ядерне роззброєння</h2>
         <p>Це був початок великого шляху незалежної України</p>
@@ -120,7 +123,9 @@
       </div>
     </div>
     <div class="material">
-      <img src="https://maksymsharan.github.io/1/Klan.png" alt="Матеріал 2">
+      <a href="https://maksymsharan.github.io/2/">
+        <img src="https://maksymsharan.github.io/1/Klan.png" alt="Матеріал 2">
+      </a>
       <div class="material-content">
         <h2>Клани 90-х</h2>
         <p>Економічний хаос породив нові виклики для країни</p>
