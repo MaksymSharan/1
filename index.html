@@ -4,13 +4,112 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Preambula</title>
-  <link rel="stylesheet" href="css/styles.css"> <!-- Підключення стилів -->
+  <style>
+    /* Загальні стилі для сторінки */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    /* Градиєнтна смужка зверху */
+    .header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .title-main {
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .title-sub {
+      font-size: 24px;
+      color: #555;
+    }
+
+    .header-bar {
+      background: linear-gradient(to right, blue, yellow);
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    /* Стиль секції для матеріалів */
+    .materials {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .material {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .material:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .material img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .material-content {
+      padding: 20px;
+    }
+
+    .material-content h2 {
+      margin: 0 0 10px;
+      font-size: 1.25rem;
+      color: #222;
+    }
+
+    .material-content p {
+      margin: 0 0 20px;
+      line-height: 1.6;
+      color: #666;
+    }
+
+    .material-content a {
+      text-decoration: none;
+      color: blue;
+      font-weight: bold;
+    }
+
+    .material-content a:hover {
+      text-decoration: underline;
+    }
+
+    /* Секція футера */
+    .footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
   <div class="header">
     <h1 class="title-main">Preambula</h1>
     <h2 class="title-sub">Переломні роки України</h2>
   </div>
+
+  <div class="header-bar">Переломні роки України</div>
 
   <div class="materials">
     <div class="material">
