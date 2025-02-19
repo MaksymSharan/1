@@ -5,25 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Preambula</title>
   <style>
-    /* Загальні стилі для сторінки */
+    /* Загальні стилі */
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      background: #ececec; /* Світло-сірий фон */
       color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Контейнер для всього контенту */
+    .content {
+      flex: 1;
     }
 
     /* Заголовок "Preambula" */
     .header {
       text-align: center;
-      padding: 10px 0; /* Зменшено відстань */
+      padding: 5px 0; /* Ще трохи вище */
     }
 
     .title-main {
       font-size: 36px;
       font-weight: bold;
-      margin-bottom: 5px; /* Мінімальна відстань */
+      margin-bottom: 0;
     }
 
     /* Градиєнтна смужка */
@@ -94,42 +102,45 @@
       text-decoration: underline;
     }
 
-    /* Футер */
+    /* Футер у самому кінці */
     .footer {
       background: #000;
       color: white;
       text-align: center;
       padding: 20px 0;
       font-size: 0.9rem;
+      margin-top: auto; /* Робить футер завжди внизу */
     }
   </style>
 </head>
 <body>
-  <div class="header">
-    <h1 class="title-main">Preambula</h1>
-  </div>
-
-  <div class="header-bar">Переломні роки України</div>
-
-  <div class="materials">
-    <div class="material">
-      <a href="https://maksymsharan.github.io/">
-        <img src="https://maksymsharan.github.io/1/Spoty.png" alt="Матеріал 1">
-      </a>
-      <div class="material-content">
-        <h2>Вибори 1991 та ядерне роззброєння</h2>
-        <p>Це був початок великого шляху незалежної України</p>
-        <a href="https://maksymsharan.github.io/">Читати більше</a>
-      </div>
+  <div class="content">
+    <div class="header">
+      <h1 class="title-main">Preambula</h1>
     </div>
-    <div class="material">
-      <a href="https://maksymsharan.github.io/2/">
-        <img src="https://maksymsharan.github.io/1/Klan.png" alt="Матеріал 2">
-      </a>
-      <div class="material-content">
-        <h2>Клани 90-х</h2>
-        <p>Економічний хаос породив нові виклики для країни</p>
-        <a href="https://maksymsharan.github.io/2/">Читати більше</a>
+
+    <div class="header-bar">Переломні роки України</div>
+
+    <div class="materials">
+      <div class="material">
+        <a href="https://maksymsharan.github.io/">
+          <img src="https://maksymsharan.github.io/1/Spoty.png" alt="Матеріал 1">
+        </a>
+        <div class="material-content">
+          <h2>Вибори 1991 та ядерне роззброєння</h2>
+          <p>Це був початок великого шляху незалежної України</p>
+          <a href="https://maksymsharan.github.io/">Читати більше</a>
+        </div>
+      </div>
+      <div class="material">
+        <a href="https://maksymsharan.github.io/2/">
+          <img src="https://maksymsharan.github.io/1/Klan.png" alt="Матеріал 2">
+        </a>
+        <div class="material-content">
+          <h2>Київська сімка</h2>
+          <p>Економічний хаос породив нові виклики для країни</p>
+          <a href="https://maksymsharan.github.io/2/">Читати більше</a>
+        </div>
       </div>
     </div>
   </div>
