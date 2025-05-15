@@ -1,23 +1,37 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Preambula</title>
   <style>
+    :root {
+      --bg: #1c1c1e;
+      --text: #f1f1f1;
+      --card: #2c2c2e;
+      --button: #007bff;
+      --button-hover: #0056b3;
+      --highlight: #fdd835;
+    }
+
+    body.light {
+      --bg: #ececec;
+      --text: #1a1a1a;
+      --card: #ffffff;
+      --button: #007bff;
+      --button-hover: #0056b3;
+    }
+
     body {
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #f5f6fa;
-      color: #2c3e50;
+      background: var(--bg);
+      color: var(--text);
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-    }
-
-    .content {
-      flex: 1;
+      transition: background 0.3s, color 0.3s;
     }
 
     .header {
@@ -29,17 +43,38 @@
       font-size: 42px;
       font-weight: bold;
       margin: 0;
-      color: #2c3e50;
     }
 
     .header-bar {
-      background: linear-gradient(90deg, #007bff, #fdd835);
-      color: white;
+      background: linear-gradient(90deg, #007bff, var(--highlight));
+      color: #000;
       text-align: center;
       padding: 15px 0;
       font-size: 1.4rem;
       font-weight: bold;
       letter-spacing: 1px;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    .controls button {
+      padding: 8px 16px;
+      font-weight: bold;
+      background: var(--button);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .controls button:hover {
+      background: var(--button-hover);
     }
 
     .materials {
@@ -51,17 +86,16 @@
     }
 
     .material {
-      background: #ffffff;
+      background: var(--card);
       border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       overflow: hidden;
       width: 300px;
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: transform 0.3s;
     }
 
     .material:hover {
       transform: translateY(-8px);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
     }
 
     .material img {
@@ -69,7 +103,6 @@
       height: 220px;
       object-fit: cover;
       display: block;
-      border-bottom: 1px solid #eee;
     }
 
     .material-content {
@@ -78,21 +111,19 @@
     }
 
     .material-content h2 {
-      margin: 0 0 15px;
       font-size: 1.3rem;
-      color: #2c3e50;
+      margin: 0 0 15px;
     }
 
     .material-content p {
       font-size: 0.95rem;
       line-height: 1.6;
-      color: #555;
       margin-bottom: 20px;
     }
 
     .material-content a {
       display: inline-block;
-      background-color: #007bff;
+      background-color: var(--button);
       color: white;
       padding: 10px 20px;
       border-radius: 8px;
@@ -102,12 +133,12 @@
     }
 
     .material-content a:hover {
-      background-color: #0056b3;
+      background-color: var(--button-hover);
     }
 
     .footer {
-      background: #2c3e50;
-      color: #fff;
+      background: #000;
+      color: #bbb;
       text-align: center;
       padding: 20px 0;
       font-size: 0.9rem;
@@ -115,52 +146,122 @@
   </style>
 </head>
 <body>
-  <div class="content">
-    <div class="header">
-      <h1 class="title-main">Preambula</h1>
-    </div>
-
-    <div class="header-bar">Переломні роки України</div>
-
-    <div class="materials">
-      <!-- Матеріал 1 -->
-      <div class="material">
-        <a href="https://maksymsharan.github.io/">
-          <img src="https://maksymsharan.github.io/1/Spoty.png" alt="Вибори 1991">
-        </a>
-        <div class="material-content">
-          <h2>Вибори 1991 та ядерне роззброєння</h2>
-          <p>Це був початок великого шляху незалежної України.</p>
-          <a href="https://maksymsharan.github.io/">Читати більше</a>
-        </div>
-      </div>
-
-      <!-- Матеріал 2 -->
-      <div class="material">
-        <a href="https://maksymsharan.github.io/2/">
-          <img src="https://maksymsharan.github.io/1/Klan.png" alt="Київська сімка">
-        </a>
-        <div class="material-content">
-          <h2>Київська сімка</h2>
-          <p>Економічний хаос породив нові виклики для країни.</p>
-          <a href="https://maksymsharan.github.io/2/">Читати більше</a>
-        </div>
-      </div>
-
-      <!-- Матеріал 3 -->
-      <div class="material">
-        <a href="https://maksymsharan.github.io/4/">
-          <img src="https://maksymsharan.github.io/4/Ulia.png" alt="Газова баронеса">
-        </a>
-        <div class="material-content">
-          <h2>Газова баронеса</h2>
-          <p>Політичний злет, енергетичні ігри та тіньовий вплив постаті 1990-х.</p>
-          <a href="https://maksymsharan.github.io/4/">Читати більше</a>
-        </div>
-      </div>
-    </div>
+  <div class="header">
+    <h1 class="title-main" id="title">Preambula</h1>
   </div>
 
-  <div class="footer">2025 &copy; Усі права захищено</div>
+  <div class="header-bar" id="subtitle">Turning Points of Ukraine</div>
+
+  <div class="controls">
+    <button onclick="toggleTheme()">🌓 Theme</button>
+    <button onclick="toggleLanguage()">🌐 UA / EN</button>
+  </div>
+
+  <div class="materials" id="materials">
+    <!-- Cards inserted by JS -->
+  </div>
+
+  <div class="footer">© 2025 All rights reserved</div>
+
+  <script>
+    const texts = {
+      en: {
+        title: "Preambula",
+        subtitle: "Turning Points of Ukraine",
+        materials: [
+          {
+            title: "1991 Elections and Nuclear Disarmament",
+            desc: "This was the beginning of Ukraine's path to independence.",
+            link: "Read More",
+            img: "https://maksymsharan.github.io/1/Spoty.png",
+            href: "https://maksymsharan.github.io/"
+          },
+          {
+            title: "The Kyiv Seven",
+            desc: "Economic chaos created new challenges for the nation.",
+            link: "Read More",
+            img: "https://maksymsharan.github.io/1/Klan.png",
+            href: "https://maksymsharan.github.io/2/"
+          },
+          {
+            title: "The Gas Baroness",
+            desc: "Political rise, energy intrigues, and shadowy influence in the 1990s.",
+            link: "Read More",
+            img: "https://maksymsharan.github.io/4/Ulia.png",
+            href: "https://maksymsharan.github.io/4/"
+          }
+        ]
+      },
+      ua: {
+        title: "Преамбула",
+        subtitle: "Переломні роки України",
+        materials: [
+          {
+            title: "Вибори 1991 та ядерне роззброєння",
+            desc: "Це був початок великого шляху незалежної України.",
+            link: "Читати більше",
+            img: "https://maksymsharan.github.io/1/Spoty.png",
+            href: "https://maksymsharan.github.io/"
+          },
+          {
+            title: "Київська сімка",
+            desc: "Економічний хаос породив нові виклики для країни.",
+            link: "Читати більше",
+            img: "https://maksymsharan.github.io/1/Klan.png",
+            href: "https://maksymsharan.github.io/2/"
+          },
+          {
+            title: "Газова баронеса",
+            desc: "Політичний злет, енергетичні ігри та тіньовий вплив у 1990-х.",
+            link: "Читати більше",
+            img: "https://maksymsharan.github.io/4/Ulia.png",
+            href: "https://maksymsharan.github.io/4/"
+          }
+        ]
+      }
+    };
+
+    let currentLang = localStorage.getItem("lang") || "en";
+    let currentTheme = localStorage.getItem("theme") || "dark";
+
+    function render() {
+      document.body.classList.toggle("light", currentTheme === "light");
+
+      const t = texts[currentLang];
+      document.getElementById("title").textContent = t.title;
+      document.getElementById("subtitle").textContent = t.subtitle;
+
+      const container = document.getElementById("materials");
+      container.innerHTML = "";
+      t.materials.forEach(item => {
+        container.innerHTML += `
+          <div class="material">
+            <a href="${item.href}">
+              <img src="${item.img}" alt="${item.title}">
+            </a>
+            <div class="material-content">
+              <h2>${item.title}</h2>
+              <p>${item.desc}</p>
+              <a href="${item.href}">${item.link}</a>
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    function toggleTheme() {
+      currentTheme = currentTheme === "light" ? "dark" : "light";
+      localStorage.setItem("theme", currentTheme);
+      render();
+    }
+
+    function toggleLanguage() {
+      currentLang = currentLang === "en" ? "ua" : "en";
+      localStorage.setItem("lang", currentLang);
+      render();
+    }
+
+    render();
+  </script>
 </body>
 </html>
