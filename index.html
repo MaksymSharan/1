@@ -10,22 +10,20 @@
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background: #ececec; /* Світло-сірий фон */
+      background: #ececec;
       color: #333;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
 
-    /* Контейнер для всього контенту */
     .content {
       flex: 1;
     }
 
-    /* Заголовок "Preambula" */
     .header {
       text-align: center;
-      padding: 5px 0; /* Ще трохи вище */
+      padding: 5px 0;
     }
 
     .title-main {
@@ -34,7 +32,6 @@
       margin-bottom: 0;
     }
 
-    /* Градиєнтна смужка */
     .header-bar {
       background: linear-gradient(to right, blue, yellow);
       color: white;
@@ -45,7 +42,6 @@
       text-transform: uppercase;
     }
 
-    /* Контейнер матеріалів (за замовчуванням у два стовпці) */
     .materials {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -53,7 +49,6 @@
       padding: 20px;
     }
 
-    /* Адаптація для мобільних: одна колонка */
     @media (max-width: 768px) {
       .materials {
         grid-template-columns: 1fr;
@@ -74,7 +69,6 @@
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
 
-    /* Однаковий розмір зображень */
     .material img {
       width: 100%;
       height: 300px;
@@ -82,7 +76,6 @@
       display: block;
     }
 
-    /* Контент усередині матеріалу */
     .material-content {
       padding: 20px;
     }
@@ -109,14 +102,13 @@
       text-decoration: underline;
     }
 
-    /* Футер у самому кінці */
     .footer {
       background: #000;
       color: white;
       text-align: center;
       padding: 20px 0;
       font-size: 0.9rem;
-      margin-top: auto; /* Робить футер завжди внизу */
+      margin-top: auto;
     }
   </style>
 </head>
@@ -139,6 +131,7 @@
           <a href="https://maksymsharan.github.io/">Читати більше</a>
         </div>
       </div>
+
       <div class="material">
         <a href="https://maksymsharan.github.io/2/">
           <img src="https://maksymsharan.github.io/1/Klan.png" alt="Матеріал 2">
@@ -149,6 +142,19 @@
           <a href="https://maksymsharan.github.io/2/">Читати більше</a>
         </div>
       </div>
+
+      <!-- Новий блок про Газову баронесу -->
+      <div class="material">
+        <a href="https://maksymsharan.github.io/4/">
+          <img src="https://maksymsharan.github.io/4/Ulia.png" alt="Газова баронеса">
+        </a>
+        <div class="material-content">
+          <h2>Газова баронеса</h2>
+          <p>Політичний злет, енергетичні ігри та тіньовий вплив однієї з найвідоміших постатей 2000-х.</p>
+          <a href="https://maksymsharan.github.io/4/">Читати більше</a>
+        </div>
+      </div>
+
     </div>
   </div>
 
