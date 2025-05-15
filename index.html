@@ -32,6 +32,43 @@
                 fbq('init', '961762688703697');
                 fbq('track', 'PageView');
                 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  document.addEventListener('contextmenu', event => event.preventDefault());
+  document.addEventListener('selectstart', event => event.preventDefault());
+  document.addEventListener('copy', event => {
+    event.preventDefault();
+    alert("Копіювання заборонено.");
+  });
+</script>
+<script>
+  document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+            
             
             <meta charSet="utf-8"/>
             <meta http-equiv="x-ua-compatible" content="ie-edge"/>
@@ -87,6 +124,39 @@
               font-weight: 400;
               background: #F2EFEA;
             }           
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        
             ul {
               list-style-type: none;
             }
